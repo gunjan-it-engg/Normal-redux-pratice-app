@@ -1,12 +1,10 @@
-const islogin = (state = 1, action) => {
+export default function islogin(loginuser = true, action) {
   switch (action.type) {
     case "LOGGEDIN":
-      const oldstate = state + 1;
-      const newstate = !oldstate;
-      return newstate;
+      const oldstate = loginuser;
+      const newstatte = !oldstate;
+      return newstatte;
     default:
-      return state;
+      return loginuser;
   }
-};
-
-export default islogin;
+}
